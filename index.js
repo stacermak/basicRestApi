@@ -1,6 +1,7 @@
 import express from "express"
 
 import authRoutes from "./routes/auth.js"
+import postRoutes from "./routes/posts.js"
 
 const app = express()
 const port = 3000
@@ -12,6 +13,7 @@ app.get('/', (req, res) => {
 })
 
 app.use("/api/auth", authRoutes)
+app.use("/api/posts", postRoutes)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
