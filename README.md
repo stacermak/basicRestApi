@@ -1,6 +1,6 @@
-#How to create basic REST API
+# How to create basic REST API
 
-##How to run it?
+## How to run it?
 
 Install [https://nodejs.org/en](https://nodejs.org/en)
 
@@ -11,7 +11,7 @@ Use npm or yarn.
 3. Run yarn start
 
 
-##DB
+## DB
 
 1. Use [Prisma Studio](https://www.prisma.io/docs/orm/tools/prisma-studio) to browser DB 
 
