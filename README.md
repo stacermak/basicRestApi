@@ -21,8 +21,9 @@ There is index.js file with hello world endpoint.
 
 ### Install packages needed for this project.
 
-`yarn add @prisma/client bcryptjs express jsonwebtoken nodemon prisma `
+`yarn add express`
 
+`yarn add @prisma/client bcryptjs express jsonwebtoken nodemon prisma`
 
 ### Check package.json
 1. Check if packages was added.
@@ -33,6 +34,16 @@ There is index.js file with hello world endpoint.
     "start": "nodemon index.js"
   },
 ```
+
+and also add type to module so we can user import instead of require.
+ `"type": "module",`
+
+ and import express like
+
+ `import express from "express"`
+
+add `app.use(express.json())` to use json in ur requests.
+
 
 Start with `yarn start`.
 
