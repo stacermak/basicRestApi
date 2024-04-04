@@ -1,4 +1,4 @@
-# basicRestApi# How to create basic REST API
+# How to create basic REST API
 
 ## How to run it?
 
@@ -130,6 +130,21 @@ Create .env file in root folder and add DATABASE_URL.
 import { PrismaClient } from "@prisma/client";
 
 export const prisma = new PrismaClient()
+```
+
+Import this to your controllers
+
+`import { prisma } from "../db.js";`
+
+To use it like
+
+```
+const newUser = await prisma.user.create({
+      data: {
+        name,
+        password: hashedPassword,
+      },
+    });
 ```
 
 
