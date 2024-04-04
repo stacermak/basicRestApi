@@ -23,6 +23,17 @@ There is index.js file with hello world endpoint.
 
 `yarn add @prisma/client bcryptjs express jsonwebtoken nodemon prisma `
 
+
+### Check package.json
+1. Check if packages was added.
+2. Add script to run instead of test
+
+```
+ "scripts": {
+    "start": "nodemon index.js"
+  },
+```
+
 Start with `yarn start`.
 
 ### Set up db
