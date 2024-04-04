@@ -1,10 +1,14 @@
 import express from "express"
 
-import { getAllPosts } from "../controllers/posts.js"
+import { getAllPosts, createPost, getPostById } from "../controllers/posts.js"
+
+import { authenticateToken } from "../middleware/authToken.js";
 
 const router = express.Router();
 
-router.get("/getAllPosts", getAllPosts)
+router.post('/posts', authenticateToken, createPost);
+router.get("/posts", getAllPosts)
+router.get("/post/:id", getPostById)
 
 
 export default router;
