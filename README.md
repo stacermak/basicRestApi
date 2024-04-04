@@ -26,7 +26,7 @@ There is index.js file with hello world endpoint.
 
 ### Check package.json
 1. Check if packages was added.
-2. Add script to run instead of test
+2. Add script to start instead of test, nodemon will automatically restart our application after you save changes.
 
 ```
  "scripts": {
