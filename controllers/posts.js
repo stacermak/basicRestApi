@@ -41,15 +41,28 @@ export const createPost = async (req, res) => {
                 id: parseInt(id),
             },
             include: {
-                author: true,
+                author: {
+                    select: {
+                    id: true,
+                    name: true,
+                    password: true,
+                    }
+                },
             },
-        });
+        });        
 
         if (!post) {
             return res.status(404).json({ message: 'Post not found' });
         }
 
-        return res.status(200).json(post);
+        const response = {
+            id: post.id,
+            title: post.title,
+            content: post.content,
+            author: post.author.name
+        }
+
+        return res.status(200).json(response);
     } catch (error) {
         console.log(error);
         res.status(500).json({ message: 'Error fetching post' });
